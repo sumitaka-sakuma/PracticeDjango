@@ -1,3 +1,13 @@
-<h1>Name: {{ my_name }}</h1>
-<h2>果物: {{ favorite_fruits.1}}</h2>
-<h3>年齢: {{ my_info.age }}</h3>
+<ul>
+  {% for fruit in favorite_fruits%}
+    <li>{{ fruit }}</li>
+  {% endfor %}
+</ul>
+
+{% if 'grape' in favorite_fruits %}
+  <p>グレープあります</p>
+{% elif 'lemon' in favorite_fruits %}
+  <p>レモンあります</p>
+{% else %}
+  <p>一致しません</p>
+{% endif %}
