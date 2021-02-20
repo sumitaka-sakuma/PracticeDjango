@@ -4,8 +4,8 @@ def index(request):
     val = 'Good Bye'
     return render(request, 'index.html', context={'value': val})
 
-def home(request):
-    my_name = 'Taro Tamada'
+def home(request, first_name, last_name):
+    my_name = f'{first_name}{last_name}'
     favorite_fruits = ['apple', 'grape', 'lemon']
     my_info = {
         'name' : 'Taro',
